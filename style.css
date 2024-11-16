@@ -1,9 +1,19 @@
+/* Grundlegendes Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Matrix Layout */
 #matrix {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,11 +24,110 @@ body {
 
 .quadrant {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
     border-radius: 8px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-h1 {
-    color: #333;
+.quadrant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.quadrant h2 {
+    color: #444;
+}
+
+/* Aufgabenliste */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li .delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Formular zum Hinzufügen von Aufgaben */
+#task-form {
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+#task-quadrant {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#add-task-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-task-button:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #matrix {
+        grid-template-columns: 1fr;
+    }
+
+    #task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #task-quadrant, #add-task-button {
+        margin-bottom: 10px;
+    }
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+/* Durchgestrichenes Styling für erledigte Aufgaben */
+.completed {
+    text-decoration: line-through;
+    color: #888;
 }

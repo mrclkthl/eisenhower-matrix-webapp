@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eisenhower Matrix</title>
+    <title>Eisenhower Matrix vom <span id="date-title"></span></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Eisenhower Matrix</h1>
-
+    <h1>Eisenhower Matrix vom <span id="date-title-h1"></span></h1>
+    
+    <!-- Formular zum Hinzufügen neuer Aufgaben -->
     <div id="task-form">
         <input type="text" id="task-input" placeholder="Neue Aufgabe eingeben" />
         <select id="task-quadrant">
@@ -20,24 +21,26 @@
         <button id="add-task-button">Aufgabe hinzufügen</button>
     </div>
 
+    <!-- Quadranten der Eisenhower Matrix -->
     <div id="matrix">
-        <div class="quadrant" id="urgent-important">
+        <div class="quadrant" id="list-urgent-important">
             <h2>Dringend & Wichtig</h2>
-            <ul id="list-urgent-important"></ul>
+            <ul id="list-urgent-important" class="task-list"></ul>
         </div>
-        <div class="quadrant" id="not-urgent-important">
+        <div class="quadrant" id="list-not-urgent-important">
             <h2>Nicht Dringend & Wichtig</h2>
-            <ul id="list-not-urgent-important"></ul>
+            <ul id="list-not-urgent-important" class="task-list"></ul>
         </div>
-        <div class="quadrant" id="urgent-not-important">
+        <div class="quadrant" id="list-urgent-not-important">
             <h2>Dringend & Nicht Wichtig</h2>
-            <ul id="list-urgent-not-important"></ul>
+            <ul id="list-urgent-not-important" class="task-list"></ul>
         </div>
-        <div class="quadrant" id="not-urgent-not-important">
+        <div class="quadrant" id="list-not-urgent-not-important">
             <h2>Nicht Dringend & Nicht Wichtig</h2>
-            <ul id="list-not-urgent-not-important"></ul>
+            <ul id="list-not-urgent-not-important" class="task-list"></ul>
         </div>
     </div>
+
     <script src="main.js" defer></script>
 </body>
 </html>
