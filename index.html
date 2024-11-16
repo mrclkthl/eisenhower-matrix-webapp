@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1>Eisenhower Matrix</h1>
+
+    <div id="task-form">
+        <input type="text" id="task-input" placeholder="Neue Aufgabe eingeben" />
+        <select id="task-quadrant">
+            <option value="list-urgent-important">Dringend & Wichtig</option>
+            <option value="list-not-urgent-important">Nicht Dringend & Wichtig</option>
+            <option value="list-urgent-not-important">Dringend & Nicht Wichtig</option>
+            <option value="list-not-urgent-not-important">Nicht Dringend & Nicht Wichtig</option>
+        </select>
+        <button id="add-task-button">Aufgabe hinzufügen</button>
+    </div>
+
     <div id="matrix">
         <div class="quadrant" id="urgent-important">
             <h2>Dringend & Wichtig</h2>
