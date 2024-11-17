@@ -166,6 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Reset-Button Funktionalität
+    const resetButton = document.getElementById("reset-button") as HTMLButtonElement;
+    resetButton.addEventListener("click", () => {
+        if (confirm("Möchtest du wirklich alle Aufgaben löschen?")) {
+            localStorage.clear();
+            location.reload();
+        }
+    });
+
     // Formular zum Hinzufügen von Aufgaben
     const addTaskButton = document.getElementById("add-task-button") as HTMLButtonElement;
     addTaskButton.addEventListener("click", () => {

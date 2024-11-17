@@ -141,6 +141,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+    // Reset-Button Funktionalität
+    var resetButton = document.getElementById("reset-button");
+    resetButton.addEventListener("click", function () {
+        if (confirm("Möchtest du wirklich alle Aufgaben löschen?")) {
+            localStorage.clear();
+            location.reload();
+        }
+    });
     // Formular zum Hinzufügen von Aufgaben
     var addTaskButton = document.getElementById("add-task-button");
     addTaskButton.addEventListener("click", function () {
